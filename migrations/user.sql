@@ -1,3 +1,5 @@
+-- Up
+
 CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
@@ -11,3 +13,8 @@ CREATE TABLE "users" (
 );
 
 CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
+
+-- Down
+
+DROP INDEX IF EXISTS "users_email_key";
+DROP TABLE IF EXISTS "users";
