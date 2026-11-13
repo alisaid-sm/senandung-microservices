@@ -1,0 +1,11 @@
+CREATE TABLE "users" (
+    "id" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "password_hash" TEXT,
+    "name" TEXT,
+    "role" TEXT,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP(3)
+);
+
+CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
